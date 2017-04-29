@@ -1,0 +1,238 @@
+/* Styling library for Forecast. © Will Howard, all rights reserved. */
+
+/* Normalisers */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1FC8DD;
+  margin: 0;
+  padding: 0px 16px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.3s box-shadow ease-in-out;
+  -webkit-appearance: none;
+}
+
+button:hover {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+button.square {
+  width: 56px;
+  padding: 16px;
+}
+
+button.square img {
+  width: 24px;
+  height: 24px;
+}
+
+button:disabled {
+  background-color: rgba(255,255,255,0.75);
+  cursor: default;
+  pointer-events: none;
+}
+
+.flex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flex .item {
+  flex: 0 0 content;
+}
+
+.flex .space {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.flex .item, .flex .space {
+  padding: 0 8px;
+}
+
+.flex div:first-child {
+  padding-left: 0;
+}
+
+.flex div:last-child {
+  padding-right: 0;
+}
+
+.flex.stretch {
+  height: auto;
+  min-height: calc(100vh - 128px);
+}
+
+
+.field {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.field:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.field.active {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.field.active input {
+  padding: 24px 16px 8px 16px;
+}
+
+.field.active input + label {
+  top: 4px;
+  opacity: 1;
+  color: #1FC8DD;
+}
+
+.field input {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  color: #222222;
+  outline: none;
+  box-shadow: 0px 4px 20px 0px transparent;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
+  -webkit-appearance: none;
+}
+
+.field input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input + label {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s all ease-in-out;
+}
+
+.field input + label.error {
+	color: #ec392f;
+}
+
+
+
+
+
+.page-background {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #399aed;
+  background: -moz-linear-gradient(45deg, #399aed 0%, #08f1ce 100%);
+  background: -webkit-linear-gradient(45deg, #399aed 0%,#08f1ce 100%);
+  background: linear-gradient(45deg, #399aed 0%,#08f1ce 100%);
+}
+
+.page-content {
+  width: 100vw;
+  height: auto;
+  padding: 56px 24px;
+  min-height: 100vh;
+  transition: 0.3s filter;
+  overflow: hidden;
+  background-image: url('/images/sun.png');
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-position: -120px 20vh;
+}
+
+.spacer {
+  width: 100%;
+  height: 16px;
+}
+
+.spacer.small {
+  height: 8px;
+}
+
+.spacer.large {
+  height: 32px;
+}
+
+@media screen and (min-width: 848px) {
+
+  .page-content {
+    padding: 56px calc(50vw - 400px);
+  }
+}
