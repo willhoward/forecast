@@ -22,6 +22,12 @@ h1 {
   font-size: 28px;
 }
 
+h2 {
+  font-size: 160px;
+  font-weight: 200;
+  line-height: 1;
+}
+
 p {
   font-size: 16px;
   color: rgba(255,255,255,0.5);
@@ -30,6 +36,19 @@ p {
 a {
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }
 
 button {
@@ -37,11 +56,6 @@ button {
   height: 56px;
   border: none;
   border-radius: 4px;
-  font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1FC8DD;
-  margin: 0;
   padding: 0px 16px;
   cursor: pointer;
   outline: none;
@@ -68,10 +82,19 @@ button.square img {
   height: 24px;
 }
 
-button:disabled {
-  background-color: rgba(255,255,255,0.75);
-  cursor: default;
-  pointer-events: none;
+.card {
+  width: 100%;
+  height: auto;
+  padding: 32px !important;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
+
+.card.outlook {
+  background-image: url('/images/sun.png');
+  background-size: calc(100% - 64px) auto;
+  background-position: center 32px;
+  background-repeat: no-repeat;
 }
 
 .flex {
@@ -83,6 +106,10 @@ button:disabled {
   flex-wrap: nowrap;
 }
 
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
 .flex .item {
   flex: 0 0 content;
 }
@@ -92,7 +119,12 @@ button:disabled {
   min-width: 0;
 }
 
-.flex .item, .flex .space {
+.flex .equal {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.flex .item, .flex .space, .flex .equal {
   padding: 0 8px;
 }
 
@@ -199,11 +231,6 @@ button:disabled {
   overflow-x: hidden;
   overflow-y: auto;
   background: linear-gradient(45deg, #399aed 0%,#08f1ce 100%);
-  transition: 500ms all ease-in-out;
-}
-
-.page-background.tornado {
-  background: linear-gradient(45deg, #0f3443 0%,#34e89e 100%);
 }
 
 .page-content {
@@ -213,10 +240,45 @@ button:disabled {
   min-height: 100vh;
   transition: 0.3s filter;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.page-content::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: url('/images/sun.png');
   background-size: auto 100vh;
   background-repeat: no-repeat;
   background-position: -120px 20vh;
+  opacity: 1;
+  transition: 500ms opacity;
+  z-index: -2;
+}
+
+.page-content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #399aed 0%,#c0588a 100%);
+  opacity: 1;
+  transition: 500ms opacity;
+  z-index: -1;
+}
+
+.page-content.loading::before {
+  opacity: 0;
+}
+
+.page-content.report::after {
+  opacity: 0;
 }
 
 .spacer {
@@ -237,4 +299,30 @@ button:disabled {
   .page-content {
     padding: 56px calc(50vw - 400px);
   }
+}
+
+table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+td {
+  border-bottom: 1px solid #ffffff;
+  padding: 12px 0;
+}
+
+tr:hover p {
+  color: #ffffff;
+}
+
+tr:first-child td {
+  padding-top: 0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+  padding-bottom: 0;
 }
