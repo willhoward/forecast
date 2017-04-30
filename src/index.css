@@ -198,10 +198,12 @@ button:disabled {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #399aed;
-  background: -moz-linear-gradient(45deg, #399aed 0%, #08f1ce 100%);
-  background: -webkit-linear-gradient(45deg, #399aed 0%,#08f1ce 100%);
   background: linear-gradient(45deg, #399aed 0%,#08f1ce 100%);
+  transition: 500ms all ease-in-out;
+}
+
+.page-background.tornado {
+  background: linear-gradient(45deg, #0f3443 0%,#34e89e 100%);
 }
 
 .page-content {
