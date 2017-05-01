@@ -5,10 +5,8 @@ import Spacer from './spacer';
 import Card from './card';
 
 const Report = ({ report, onChange, onSubmit, onReset }) => {
-  console.log(report);
   const score = report.ruleGroups.SPEED.score;
   const rules = report.formattedResults.ruleResults;
-  console.log(rules);
 
   return (
     <div className="flex">
