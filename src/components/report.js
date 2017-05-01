@@ -29,7 +29,7 @@ const Report = ({ report, onChange, onSubmit, onReset }) => {
           </div>
         </form>
         <Spacer size="medium" />
-        <h1>Your forecast for &#8216;{report.title}&#8217;</h1>
+        <h1 className="wrap">Your forecast for &#8216;{report.title}&#8217;</h1>
         <p>With data from Google PageSpeed Insights</p>
         <Spacer size="medium" />
         <Card>

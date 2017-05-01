@@ -18,6 +18,13 @@ h1, h2, h3, h4, h5, h6, p {
   color: #ffffff;
 }
 
+
+h1.wrap, h2.wrap, h3.wrap, h4.wrap, h5.wrap, h6.wrap, p.wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 h1 {
   font-size: 28px;
 }
@@ -268,17 +275,17 @@ button.square img {
   top: 0;
   left: 0;
   background: linear-gradient(45deg, #399aed 0%,#c0588a 100%);
-  opacity: 1;
+  opacity: 0;
   transition: 500ms opacity;
   z-index: -1;
 }
 
-.page-content.loading::before {
+.page-content.loading::before, .page-content.report::before {
   opacity: 0;
 }
 
-.page-content.report::after {
-  opacity: 0;
+.page-content.loading::after {
+  opacity: 1;
 }
 
 .spacer {

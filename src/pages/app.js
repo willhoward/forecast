@@ -51,7 +51,7 @@ class App extends Component {
     const { loading, report } = this.state;
 
     return (
-      <Page loading={loading || report !== null} report={!loading && report === null}>
+      <Page loading={loading} report={report !== null}>
         {loading && <Loading />}
         {!loading && !report && <Target onChange={this.setTarget} onSubmit={this.generateReport} />}
         {!loading &&
