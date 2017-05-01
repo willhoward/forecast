@@ -34,7 +34,7 @@ const Report = ({ report, onChange, onSubmit, onReset }) => {
         <Spacer size="medium" />
         <Card>
           <h2>{score}</h2>
-          <p>Overall performance score. <a>What&#8217;s this</a>?</p>
+          <p>Overall performance score.</p>
         </Card>
         <Spacer size="medium" />
         <h1>Performance Breakdown</h1>
@@ -46,80 +46,80 @@ const Report = ({ report, onChange, onSubmit, onReset }) => {
                 <td>
                   <p>Avoid landing page redirects</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.AvoidLandingPageRedirects.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.AvoidLandingPageRedirects.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Enable gzip compression</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.EnableGzipCompression.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.EnableGzipCompression.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Leverage browser caching</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.LeverageBrowserCaching.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.LeverageBrowserCaching.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Main resource server response time</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.MainResourceServerResponseTime.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.MainResourceServerResponseTime.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Minify CSS</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.MinifyCss.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.MinifyCss.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Minify HTML</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.MinifyHTML.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.MinifyHTML.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Minify Javascript</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.MinifyJavaScript.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.MinifyJavaScript.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Minimise render-blocking resources</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.MinimizeRenderBlockingResources.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.MinimizeRenderBlockingResources.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Optimise images</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.OptimizeImages.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.OptimizeImages.ruleImpact)}</p>
                 </td>
               </tr>
               <tr>
                 <td>
                   <p>Prioritise visible content</p>
                 </td>
-                <td>
-                  <p>{Math.round(rules.PrioritizeVisibleContent.ruleImpact)}</p>
+                <td className="align-right">
+                  <p>-{Math.round(rules.PrioritizeVisibleContent.ruleImpact)}</p>
                 </td>
               </tr>
             </tbody>
