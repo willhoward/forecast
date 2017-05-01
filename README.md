@@ -1,6 +1,6 @@
 # Forecast
 
-Generate a forecast for any website. A project from [Will Howard](https://willhowardgb.com).
+Generate a forecast for any website. A project from [Will Howard](https://willhowardgb.com), intended a an experiment into lean front-end UI with React.
 
 ### Usage
 
@@ -13,4 +13,4 @@ In its current state, this project includes the following caveats which should b
 * Google Tag Manage script, in `/public/index.html`.
 * 'Gotham Screensmart' font from Hoefler & Co, which is linked in `/public/index.html`, with files at `/public/fonts`.
 
-This project uses the [Google PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v2/reference/?hl=en-US&utm_source=PSI&utm_medium=incoming-link&utm_campaign=PSI) and the Fuel styling library.
+This project was bootstrapped using [Create React App](https://github.com/facebookincubator/create-react-app), uses the [Google PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v2/reference/?hl=en-US&utm_source=PSI&utm_medium=incoming-link&utm_campaign=PSI) and is styled in part with Fuel.
