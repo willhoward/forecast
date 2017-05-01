@@ -1,6 +1,6 @@
 # Forecast
 
-Generate a forecast for any website. A project from [Will Howard](https://willhowardgb.com), intended a an experiment into lean front-end UI with React.
+Generate a forecast for any website. A project from [Will Howard](https://willhowardgb.com), intended as an experiment into lean front-end UI with React.
 
 ### Usage
 
